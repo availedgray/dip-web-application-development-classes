@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Note the change in import path
 import Lifecycle from "./LifeCycle";
+import UserProfile from "./UserObject";
 
 function ItemList({ items }) {
   // Your code goes here to return JSX
@@ -35,7 +36,8 @@ function App() {
     <>
       <Lifecycle />
       <ItemList items={items} />
-      {/* <UserProfile
+      {UserProfile
+      /* <UserProfile
         firstName="John"
         lastName="Doe"
         age={30}
