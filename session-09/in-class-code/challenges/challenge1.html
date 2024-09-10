@@ -16,6 +16,7 @@
       function UserList() {
         const userList = [
           {
+            id: 1,
             firstName: "John",
             lastName: "Doe",
             age: 30,
@@ -33,6 +34,7 @@
             isEmployed: true,
           },
           {
+            id: 2,
             firstName: "Bianca",
             lastName: "Doe",
             age: 30,
@@ -50,6 +52,7 @@
             isEmployed: true,
           },
           {
+            id: 3,
             firstName: "Clare",
             lastName: "Doe",
             age: 30,
@@ -74,15 +77,15 @@
         return (
           // Dont foget to wrap you list in the <ul> or <ol>tag
           <ul>
-            {items.map((item) => (
-              <li key={item.product}>
-                Name: {item.product}
+            {userList.map((userList, index) => (
+              <li key={index}>
+                First Name: {userList.firstName}
                 <br />
-                Amount: {item.number}
+                Last Name: {userList.lastName}
                 <br />
-                Price: {item.price}
+                Age: {userList.age}
                 <br />
-                Cost: {item.price * item.number}
+                Skills: {userList.skills.join(", ")}
                 <br />
               </li>
             ))}
@@ -92,7 +95,7 @@
       // Correct usage of ReactDOM.createRoot
       const domNode = document.getElementById("app");
       const root = ReactDOM.createRoot(domNode); // Initialise the root.
-      root.render(<MyList />); // Render the App component.
+      root.render(<UserList />); // Render the App component.
     </script>
   </body>
 </html>

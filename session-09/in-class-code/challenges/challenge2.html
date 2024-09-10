@@ -51,11 +51,30 @@
         };
 
         // Destructure the props and render out both users in their own component in a fragment
+        return (
+          <>            
+            <Child user={userObject}/>
+            <ChildTwo user={userObject2} />
+          </>
+        );
       }
 
       // Destructuring Example
-      function ChildTwo({ name }) {
-        return <p>Child received: {name}</p>;
+      function Child({ user }) {
+        return <p>Child received: {user.firstName} {user.lastName}</p>;
+        
+      }
+
+      function ChildTwo({ user }) {
+        
+        return (
+        <div>
+          <h2>Name: {user.firstName} {user.lastName}</h2>
+          <p>Age: {user.age}</p>
+          <p>Skills: {user.skills.join(", ")}</p>
+          
+        </div>
+        );
       }
 
       const root = ReactDOM.createRoot(document.getElementById("app"));
