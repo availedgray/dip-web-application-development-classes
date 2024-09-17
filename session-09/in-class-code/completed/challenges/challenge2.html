@@ -11,10 +11,10 @@
     <!-- Babel for in-browser JSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- JSX script with type="text/babel" to ensure Babel compiles it -->
+    <!-- JSX script with type="text/jsx" to ensure Babel compiles it -->
     <script type="text/babel">
       function Parent() {
-        const userObject = {
+        const userObject1 = {
           firstName: "John",
           lastName: "Doe",
           age: 30,
@@ -33,33 +33,32 @@
         };
 
         const userObject2 = {
-          firstName: "John",
-          lastName: "Doe",
-          age: 30,
-          isStudent: false,
+          firstName: "Jane",
+          lastName: "Smith",
+          age: 28,
+          isStudent: true,
           address: {
-            street: "123 Main St",
-            city: "Perth",
-            zipCode: "6000",
+            street: "456 Oak St",
+            city: "Sydney",
+            zipCode: "2000",
           },
-          skills: ["JavaScript", "HTML", "CSS"],
+          skills: ["React", "Node.js", "CSS"],
           socialProfiles: {
-            twitter: "@johndoe",
-            linkedIn: "linkedin.com/in/johndoe",
+            twitter: "@janesmith",
+            linkedIn: "linkedin.com/in/janesmith",
           },
-          isEmployed: true,
+          isEmployed: false,
         };
 
         // Destructure the props and render out both users in their own component in a fragment
         return (
           <>
-            <User {...userObject} />
+            <User {...userObject1} />
             <User {...userObject2} />
           </>
         );
       }
 
-      // Destructuring Example
       function User({
         firstName,
         lastName,
@@ -69,16 +68,26 @@
         socialProfiles,
         isEmployed,
       }) {
-        console.log(firstName);
         return (
           <div>
             <h2>
-              Name: {firstName} {lastName}
+              {firstName} {lastName}
             </h2>
             <p>Age: {age}</p>
+            <p>
+              Address: {address.street}, {address.city}, {address.zipCode}
+            </p>
             <p>Skills: {skills.join(", ")}</p>
+            <p>Twitter: {socialProfiles.twitter}</p>
+            <p>LinkedIn: {socialProfiles.linkedIn}</p>
+            <p>Employment Status: {isEmployed ? "Employed" : "Unemployed"}</p>
           </div>
         );
+      }
+
+      // Destructuring Example
+      function ChildTwo({ name }) {
+        return <p>Child received: {name}</p>;
       }
 
       const root = ReactDOM.createRoot(document.getElementById("app"));

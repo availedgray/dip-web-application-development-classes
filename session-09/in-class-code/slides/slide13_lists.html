@@ -13,7 +13,11 @@
 
     <!-- JSX script with type="text/babel" to ensure Babel compiles it -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <script type="text/jsx">
+=======
+    <script type="text/babel">
+>>>>>>> upstream/S2-2024
 =======
     <script type="text/babel">
 >>>>>>> upstream/S2-2024
@@ -29,10 +33,14 @@
           <ul>
             {items.map((item) => (
               <li key={item.product}>
-                Name: {item.product}<br/>
-                Amount: {item.number}<br/>
-                Price: {item.price}<br/>
-                Cost: {item.price * item.number}<br/>
+                Name: {item.product}
+                <br />
+                Amount: {item.number}
+                <br />
+                Price: {item.price}
+                <br />
+                Cost: {item.price * item.number}
+                <br />
               </li>
             ))}
           </ul>

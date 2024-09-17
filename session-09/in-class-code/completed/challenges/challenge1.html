@@ -50,10 +50,6 @@
             isEmployed: true,
           },
           {
-<<<<<<< HEAD
-            id: 5003670,
-=======
->>>>>>> upstream/S2-2024
             firstName: "Clare",
             lastName: "Doe",
             age: 30,
@@ -72,28 +68,26 @@
           },
         ];
 
-        // Iterate over the user list and print out first name, last name, age and skills of each user
-
-        // List example
+        // Iterate over the user list and print out first name, last name, age, and skills of each user
         return (
-          // Dont foget to wrap you list in the <ul> or <ol>tag
           <ul>
             {userList.map((user, index) => (
               <li key={index}>
-                Name: {user.firstName} {user.lastName}
-                <br />
-                Age: {user.age}
-                <br />
-                Skills: {user.skills.join(", ")}
+                <p>
+                  Name: {user.firstName} {user.lastName}
+                </p>
+                <p>Age: {user.age}</p>
+                <p>Skills: {user.skills.join(", ")}</p>
               </li>
             ))}
           </ul>
         );
       }
+
       // Correct usage of ReactDOM.createRoot
       const domNode = document.getElementById("app");
       const root = ReactDOM.createRoot(domNode); // Initialise the root.
-      root.render(<UserList />); // Render the App component.
+      root.render(<UserList />); // Render the UserList component.
     </script>
   </body>
 </html>

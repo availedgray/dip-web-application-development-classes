@@ -16,14 +16,6 @@ module.exports = {
           loader: "babel-loader",
         },
       },
-      // part of activity 1
-      {
-        test: /\.css$/, // Match any .css file
-        use: [
-          "style-loader", // Injects CSS into the DOM
-          "css-loader", // Turns CSS into CommonJS
-        ],
-      },
     ],
   },
   plugins: [
