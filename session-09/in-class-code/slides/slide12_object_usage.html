@@ -13,22 +13,12 @@
 
     <!-- JSX script with type="text/babel" to ensure Babel compiles it -->
     <script type="text/babel">
-<<<<<<< HEAD
-
-      function DisplayDate() {
-          const today = new Date();
-          // Incorrect:
-          // return { today };
-          return <p>Today's date is: {today.toDateString()}</p>;
-        }
-=======
       function DisplayDate() {
         const today = new Date();
         // Incorrect:
         // return { today };
         return <p>Today's date is: {today.toDateString()}</p>;
       }
->>>>>>> upstream/S2-2024
 
       // Correct usage of ReactDOM.createRoot
       const domNode = document.getElementById("app");
