@@ -51,8 +51,8 @@
             },
             isEmployed: true,
           },
-          {
-            id: 3,
+          { 
+            id: 5003670,
             firstName: "Clare",
             lastName: "Doe",
             age: 30,
@@ -77,16 +77,13 @@
         return (
           // Dont foget to wrap you list in the <ul> or <ol>tag
           <ul>
-            {userList.map((userList, index) => (
+            {userList.map((user, index) => (
               <li key={index}>
-                First Name: {userList.firstName}
+                Name: {user.firstName} {user.lastName}
                 <br />
-                Last Name: {userList.lastName}
+                Age: {user.age}
                 <br />
-                Age: {userList.age}
-                <br />
-                Skills: {userList.skills.join(", ")}
-                <br />
+                Skills: {user.skills.join(", ")}
               </li>
             ))}
           </ul>

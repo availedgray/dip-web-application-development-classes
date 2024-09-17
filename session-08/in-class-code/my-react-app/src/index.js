@@ -36,14 +36,13 @@ function App() {
     <>
       <Lifecycle />
       <ItemList items={items} />
-      {UserProfile
-      /* <UserProfile
+      <UserProfile
         firstName="John"
         lastName="Doe"
         age={30}
         isStudent={false}
         skills={["JavaScript", "React", "CSS"]}
-      /> */}
+      />
     </>
   );
 }

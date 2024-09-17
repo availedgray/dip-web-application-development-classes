@@ -52,27 +52,32 @@
 
         // Destructure the props and render out both users in their own component in a fragment
         return (
-          <>            
-            <Child user={userObject}/>
-            <ChildTwo user={userObject2} />
+          <>
+            <User {...userObject} />
+            <User {...userObject2} />
           </>
         );
       }
 
       // Destructuring Example
-      function Child({ user }) {
-        return <p>Child received: {user.firstName} {user.lastName}</p>;
-        
-      }
-
-      function ChildTwo({ user }) {
-        
+      function User({
+        firstName,
+        lastName,
+        age,
+        address,
+        skills,
+        socialProfiles,
+        isEmployed,
+      }) {
+        console.log(firstName);
         return (
-        <div>
-          <h2>Name: {user.firstName} {user.lastName}</h2>
-          <p>Age: {user.age}</p>
-          <p>Skills: {user.skills.join(", ")}</p>
-        </div>
+          <div>
+            <h2>
+              Name: {firstName} {lastName}
+            </h2>
+            <p>Age: {age}</p>
+            <p>Skills: {skills.join(", ")}</p>
+          </div>
         );
       }
 

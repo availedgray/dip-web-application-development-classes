@@ -18,9 +18,15 @@
           const today = new Date();
           // Incorrect:
           // return { today };
-      
           return <p>Today's date is: {today.toDateString()}</p>;
         }
+      function DisplayDate() {
+        const today = new Date();
+        // Incorrect:
+        // return { today };
+        return <p>Today's date is: {today.toDateString()}</p>;
+      }
+
 
       // Correct usage of ReactDOM.createRoot
       const domNode = document.getElementById("app");

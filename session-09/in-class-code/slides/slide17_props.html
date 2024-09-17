@@ -26,14 +26,13 @@
 
       // Passing only the object
       function Child(props) {
-        // console.log( `Inside child component name: ${props.name}`)
         return <p>Child received: {props.name}</p>;
       }
 
       // Destructuring Props
       function ChildTwo({ name }) {
-        // console.log( `Inside child two component name: ${name}`)
-        // debugger;
+        console.log(`Inside child component prop name is: ${props.name}`);
+        debugger;
         return <p>Child received: {name}</p>;
       }
 
