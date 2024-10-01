@@ -6,7 +6,11 @@ const App = () => {
   return (
     <div>
       <StyledComponent />
+<<<<<<< HEAD
       {/* {<FormComponent />} */}
+=======
+      {/* <FormComponent /> */}
+>>>>>>> upstream/S2-2024
     </div>
   );
 };

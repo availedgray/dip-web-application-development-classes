@@ -36,6 +36,6 @@ function UserProfile(props) {
       <p>Skills: {formattedSkills.join(', ')}</p> // Incorrect usage
     </div>
   );
-}
+
 
 export default UserProfile;
